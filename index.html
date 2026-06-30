@@ -66,11 +66,11 @@ nav{display:flex;align-items:center;justify-content:space-between;height:68px;ga
 .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:440px;--orbit-r:150px;perspective:820px;}
 .hero-markglow{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(40,189,53,.42),rgba(40,189,53,.16) 40%,transparent 70%);transform:translateZ(0);z-index:0;}
 /* Bulletproof 2D-keyframe 3D-look orbit */
-.orbwrap{position:relative;width:360px;height:360px;display:flex;align-items:center;justify-content:center;}
-.orbmark{position:relative;z-index:5;width:190px;height:auto;animation:bob 6s ease-in-out infinite;}
-.orbcard{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:14px;background:#16331b;border:1px solid rgba(61,232,76,.4);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.55),0 0 16px rgba(40,189,53,.18);animation:orbit 28s linear infinite;will-change:transform,opacity;}
-.orbcard svg{width:27px;height:27px;}
-@keyframes orbit{0%{transform:translate(150px,0) scale(.6);opacity:.45;z-index:1;}12.5%{transform:translate(106.05px,-31.107999999999997px) scale(.55);opacity:.4;z-index:1;}25%{transform:translate(0,-44px) scale(.5);opacity:.35;z-index:1;}37.5%{transform:translate(-106.05px,-31.107999999999997px) scale(.55);opacity:.4;z-index:1;}50%{transform:translate(-150px,0) scale(.6);opacity:.45;z-index:1;}62.5%{transform:translate(-106.05px,31.107999999999997px) scale(.85);opacity:.85;z-index:10;}75%{transform:translate(0,44px) scale(1);opacity:1;z-index:10;}87.5%{transform:translate(106.05px,31.107999999999997px) scale(.85);opacity:.85;z-index:10;}100%{transform:translate(150px,0) scale(.6);opacity:.45;z-index:1;}}
+.orbwrap{position:relative;width:480px;height:480px;display:flex;align-items:center;justify-content:center;}
+.orbmark{position:relative;z-index:5;width:240px;height:auto;animation:bob 6s ease-in-out infinite;}
+.orbcard{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:15px;background:#16331b;border:1px solid rgba(61,232,76,.4);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.55),0 0 16px rgba(40,189,53,.18);animation:orbit 28s linear infinite;will-change:transform,opacity;}
+.orbcard svg{width:29px;height:29px;}
+@keyframes orbit{0%{transform:translate(200px,0) scale(.6);opacity:.45;z-index:1;}12.5%{transform:translate(141.4px,-43.83px) scale(.55);opacity:.4;z-index:1;}25%{transform:translate(0,-62px) scale(.5);opacity:.35;z-index:1;}37.5%{transform:translate(-141.4px,-43.83px) scale(.55);opacity:.4;z-index:1;}50%{transform:translate(-200px,0) scale(.6);opacity:.45;z-index:1;}62.5%{transform:translate(-141.4px,43.83px) scale(.9);opacity:.85;z-index:10;}75%{transform:translate(0,62px) scale(1.08);opacity:1;z-index:10;}87.5%{transform:translate(141.4px,43.83px) scale(.9);opacity:.85;z-index:10;}100%{transform:translate(200px,0) scale(.6);opacity:.45;z-index:1;}}
 .hero-ring{position:absolute;width:300px;height:300px;border:1px solid rgba(40,189,53,.18);border-radius:50%;}
 
 .hero-mark{animation:bob 6s ease-in-out infinite;}
