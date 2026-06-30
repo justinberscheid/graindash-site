@@ -64,10 +64,10 @@ nav{display:flex;align-items:center;justify-content:space-between;height:68px;ga
 .hero .sub{margin-top:20px;font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);max-width:30ch;}
 .hero-cta{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
 .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:340px;}
-.hero-markglow{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(40,189,53,.34),rgba(40,189,53,.14) 38%,transparent 68%);will-change:transform;transform:translateZ(0);}
+.hero-markglow{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(40,189,53,.42),rgba(40,189,53,.16) 40%,transparent 70%);transform:translateZ(0);}
 .hero-ring{position:absolute;width:300px;height:300px;border:1px solid rgba(40,189,53,.18);border-radius:50%;}
 .hero-markwrap{position:relative;animation:bob 6s ease-in-out infinite;}
-.hero-mark{width:210px;height:auto;filter:drop-shadow(0 0 26px rgba(40,189,53,.35));}
+.hero-mark{width:210px;height:auto;}
 @keyframes bob{0%,100%{transform:translateY(-7px);}50%{transform:translateY(7px);}}
 
 /* marquee */
@@ -107,7 +107,7 @@ section.block{padding:88px 0;position:relative;}
 
 /* scout */
 .scout{position:relative;overflow:hidden;}
-.scout-glow{position:absolute;top:10%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(40,189,53,.1),transparent 60%);filter:blur(60px);pointer-events:none;}
+.scout-glow{position:absolute;top:10%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(40,189,53,.1),rgba(40,189,53,.03) 45%,transparent 72%);pointer-events:none;}
 .scout-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
 .scout h2{font-size:clamp(1.8rem,3.6vw,2.6rem);}
 .scout .lead{margin:18px 0 26px;color:var(--muted);font-size:1.1rem;}
@@ -141,7 +141,7 @@ section.block{padding:88px 0;position:relative;}
 
 /* download */
 .download{position:relative;overflow:hidden;}
-.dl-glow{position:absolute;bottom:-30%;left:50%;transform:translateX(-50%);width:min(900px,120vw);height:500px;background:radial-gradient(circle,rgba(40,189,53,.12),transparent 60%);filter:blur(60px);pointer-events:none;}
+.dl-glow{position:absolute;bottom:-30%;left:50%;transform:translate3d(-50%,0,0);width:min(900px,120vw);height:500px;background:radial-gradient(circle,rgba(40,189,53,.12),rgba(40,189,53,.04) 45%,transparent 72%);pointer-events:none;}
 .dl-badges{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
 .dl-badge{display:flex;align-items:center;gap:13px;background:var(--card);border:1px solid var(--border);border-radius:13px;padding:14px 24px;transition:transform .15s,border-color .15s;}
 .dl-badge:hover{transform:translateY(-3px);border-color:var(--green);}
