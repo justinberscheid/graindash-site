@@ -232,9 +232,9 @@ html.js [data-reveal].in{opacity:1;transform:none;}
 
 
 /* ============ DEVICE SHOWCASE ============ */
-.showcase{position:relative;margin:56px 0 8px;padding:10px 0 0;}
+.showcase{position:relative;margin:56px 0 44px;padding:10px 0 0;}
 .showcase .sc-glow{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:820px;height:520px;max-width:96%;background:radial-gradient(ellipse at center,rgba(40,189,53,.28),rgba(40,189,53,.05) 55%,transparent 72%);filter:blur(18px);z-index:0;pointer-events:none;}
-.sc-stage{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding-bottom:40px;}
+.sc-stage{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding-bottom:64px;}
 /* Laptop */
 .laptop{position:relative;width:100%;max-width:900px;margin:0 auto;}
 .laptop .lid{position:relative;background:#1c1f22;border:2px solid #2c3136;border-radius:16px 16px 8px 8px;padding:12px 12px 0;box-shadow:0 30px 70px -20px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.02) inset;}
@@ -257,15 +257,20 @@ html.js .sc-anim.in{opacity:1;transform:none;transition:opacity .8s cubic-bezier
 html.js .phone.sc-anim{transform:translateY(46px) translateX(-14px) scale(.94);transition-delay:.15s;}
 html.js .phone.sc-anim.in{transform:none;}
 @media(max-width:760px){
-  .showcase{margin:40px 0 4px;}
+  .showcase{margin:36px 0 40px;}
+  .sc-stage{padding-bottom:70px;}
   .laptop .barw .addr{display:none;}
-  .phone{width:118px;left:1%;bottom:-6px;border-width:5px;border-radius:24px;}
-  .phone .pscr{border-radius:19px;}
-  .phone .notch{width:40px;height:12px;top:10px;}
-  .sc-glow{height:400px;}
+  .laptop .lid{padding:9px 9px 0;border-radius:12px 12px 6px 6px;}
+  .laptop .barw{padding:0 2px 8px;gap:5px;}
+  .laptop .barw i{width:9px;height:9px;}
+  .phone{width:104px;left:4%;bottom:8px;border-width:5px;border-radius:22px;padding:4px;}
+  .phone .pscr{border-radius:17px;}
+  .phone .notch{width:36px;height:11px;top:9px;}
+  .sc-glow{height:360px;top:40%;}
 }
 @media(max-width:420px){
-  .phone{width:96px;}
+  .phone{width:88px;bottom:10px;}
+  .sc-stage{padding-bottom:58px;}
 }
 
 /* ============ RESPONSIVE ============ */
