@@ -234,7 +234,7 @@ html.js [data-reveal].in{opacity:1;transform:none;}
 /* ============ DEVICE SHOWCASE ============ */
 .showcase{position:relative;margin:56px 0 44px;padding:10px 0 0;}
 .showcase .sc-glow{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:820px;height:520px;max-width:96%;background:radial-gradient(ellipse at center,rgba(40,189,53,.28),rgba(40,189,53,.05) 55%,transparent 72%);filter:blur(18px);z-index:0;pointer-events:none;}
-.sc-stage{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding-bottom:64px;}
+.sc-stage{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding-bottom:88px;}
 /* Laptop */
 .laptop{position:relative;width:100%;max-width:900px;margin:0 auto;}
 .laptop .lid{position:relative;background:#1c1f22;border:2px solid #2c3136;border-radius:16px 16px 8px 8px;padding:12px 12px 0;box-shadow:0 30px 70px -20px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.02) inset;}
@@ -242,14 +242,15 @@ html.js [data-reveal].in{opacity:1;transform:none;}
 .laptop .barw i{width:11px;height:11px;border-radius:50%;display:inline-block;}
 .laptop .barw .r{background:#ff5f57;}.laptop .barw .y{background:#febc2e;}.laptop .barw .g{background:#28c840;}
 .laptop .barw .addr{flex:1;margin-left:10px;height:22px;border-radius:6px;background:#0e1113;border:1px solid #2a2f34;display:flex;align-items:center;padding:0 10px;color:#7d888f;font:500 11px/1 'Public Sans',sans-serif;letter-spacing:.02em;}
-.laptop .scr{border-radius:4px;overflow:hidden;background:#0b0b0b;border:1px solid #23282d;}
+.laptop .scr{border-radius:5px;overflow:hidden;background:#0b0b0b;border:1px solid #23282d;}
 .laptop .scr img{display:block;width:100%;height:auto;}
 .laptop .base{position:relative;height:16px;background:linear-gradient(#20242a,#15181b);border-radius:0 0 14px 14px;border:2px solid #2c3136;border-top:none;box-shadow:0 24px 40px -18px rgba(0,0,0,.8);}
 .laptop .base:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:120px;height:7px;background:#0c0e10;border-radius:0 0 8px 8px;}
 /* Phone overlapping bottom-left */
-.phone{position:absolute;left:2%;bottom:-8px;width:172px;z-index:3;background:#0c0e10;border:6px solid #17191c;border-radius:32px;box-shadow:0 26px 50px -14px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.04) inset;padding:6px;}
-.phone .notch{position:absolute;left:50%;top:12px;transform:translateX(-50%);width:52px;height:15px;background:#000;border-radius:10px;z-index:4;}
-.phone .pscr{position:relative;border-radius:26px;overflow:hidden;background:#111;}
+.phone{position:absolute;left:1%;bottom:-14px;width:210px;z-index:3;background:linear-gradient(155deg,#23262b,#0c0e10 60%);border:2px solid #34383e;border-radius:40px;box-shadow:0 30px 60px -14px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.05) inset,0 2px 4px rgba(255,255,255,.06) inset;padding:8px;}
+.phone .pscr{position:relative;border-radius:32px;overflow:hidden;background:#111;box-shadow:0 0 0 2px #000 inset;}
+.phone:before{content:"";position:absolute;right:-3px;top:96px;width:3px;height:52px;background:#2a2e33;border-radius:0 3px 3px 0;}
+.phone:after{content:"";position:absolute;left:-3px;top:70px;width:3px;height:30px;background:#2a2e33;border-radius:3px 0 0 3px;box-shadow:0 44px 0 #2a2e33;}
 .phone .pscr img{display:block;width:100%;height:auto;}
 /* entrance */
 html.js .sc-anim{opacity:0;transform:translateY(38px) scale(.985);}
@@ -257,20 +258,19 @@ html.js .sc-anim.in{opacity:1;transform:none;transition:opacity .8s cubic-bezier
 html.js .phone.sc-anim{transform:translateY(46px) translateX(-14px) scale(.94);transition-delay:.15s;}
 html.js .phone.sc-anim.in{transform:none;}
 @media(max-width:760px){
-  .showcase{margin:36px 0 52px;}
-  .sc-stage{padding-bottom:104px;}
+  .showcase{margin:36px 0 56px;}
+  .sc-stage{padding-bottom:120px;}
   .laptop .barw .addr{display:none;}
   .laptop .lid{padding:9px 9px 0;border-radius:12px 12px 6px 6px;}
   .laptop .barw{padding:0 2px 8px;gap:5px;}
   .laptop .barw i{width:9px;height:9px;}
-  .phone{width:104px;left:4%;bottom:14px;border-width:5px;border-radius:22px;padding:4px;}
-  .phone .pscr{border-radius:17px;}
-  .phone .notch{width:36px;height:11px;top:9px;}
+  .phone{width:132px;left:2%;bottom:6px;border-width:2px;border-radius:26px;padding:5px;}
+  .phone .pscr{border-radius:21px;}
   .sc-glow{height:360px;top:40%;}
 }
 @media(max-width:420px){
-  .phone{width:88px;bottom:10px;}
-  .sc-stage{padding-bottom:92px;}
+  .phone{width:112px;bottom:8px;}
+  .sc-stage{padding-bottom:108px;}
 }
 
 /* ============ RESPONSIVE ============ */
@@ -379,7 +379,6 @@ html.js .phone.sc-anim.in{transform:none;}
         <div class="base"></div>
       </div>
       <div class="phone sc-anim" data-reveal>
-        <div class="notch"></div>
         <div class="pscr"><img src="assets/phone-binyard.jpg" alt="GrainDash Bin Yard on mobile" loading="lazy" width="640" height="1311"/></div>
       </div>
     </div>
