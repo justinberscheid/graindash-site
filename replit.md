@@ -4,7 +4,7 @@
 Static single-page marketing website for GrainDash (farm dashboard SaaS), served from `index.html` at the repo root. No build step, no framework — one HTML file with inline CSS/JS, plus images in `assets/`. Production hosting is GitHub Pages (graindash.net); the app itself lives at graindashapp.net (separate project).
 
 ## Running locally
-The `Static Server` workflow serves the site on port 5000: `python3 -m http.server 5000 --directory .`
+The `Static Server` workflow serves the site on port 5000 via `python3 server.py` — a thin wrapper around `http.server` that adds `Cache-Control: no-store` headers. Do not swap it back to bare `python3 -m http.server`: without the no-cache headers, browsers heuristic-cache the page and the preview pane shows stale content after edits.
 
 ## Structure
 - `index.html` — entire site (styles in a single `<style>` block, scripts inline at the bottom)
