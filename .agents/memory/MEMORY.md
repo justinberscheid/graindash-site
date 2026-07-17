@@ -1,0 +1,1 @@
+- [Visual QA techniques](visual-qa-static-site.md) — smooth-scroll breaks anchor screenshots; use scratch pages + fixed-width iframes for breakpoints; ffmpeg delogo to erase baked-in UI from refs.
