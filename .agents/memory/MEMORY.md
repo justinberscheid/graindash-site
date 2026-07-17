@@ -1,2 +1,3 @@
 - [Visual QA techniques](visual-qa-static-site.md) — smooth-scroll breaks anchor screenshots; use scratch pages + fixed-width iframes for breakpoints; ffmpeg delogo to erase baked-in UI from refs.
 - [Dev preview caching gotcha](dev-preview-caching.md) — bare http.server has no Cache-Control, so the user's preview pane heuristic-caches stale pages; must serve via server.py (no-store).
+- [Mockup sandbox in non-Node projects](mockup-sandbox-non-node-projects.md) — BOOTSTRAP_FAILED means no node binary: install nodejs module, retry createArtifact, npm install, restart all workflows.

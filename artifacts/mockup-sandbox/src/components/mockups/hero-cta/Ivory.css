@@ -1,0 +1,57 @@
+/* Ivory Variant Overrides */
+
+.gd-ivory .hero-cta {
+  gap: 16px;
+}
+
+.gd-ivory .btn {
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 14px 28px;
+  letter-spacing: 0.01em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gd-ivory .btn.primary {
+  background: #F4F1EB;
+  color: #0A110C;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.gd-ivory .btn.primary:hover {
+  background: #FDFBFC;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--green);
+}
+
+.gd-ivory .btn.primary:focus-visible {
+  outline: 2px solid var(--green-hi);
+  outline-offset: 2px;
+}
+
+.gd-ivory .btn.primary .arrow {
+  color: var(--green);
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-left: 2px;
+}
+
+.gd-ivory .btn.primary:hover .arrow {
+  transform: translateX(4px);
+}
+
+.gd-ivory .btn.ghost {
+  background: rgba(255, 255, 255, 0.03);
+  color: #D3D8CF;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.gd-ivory .btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}

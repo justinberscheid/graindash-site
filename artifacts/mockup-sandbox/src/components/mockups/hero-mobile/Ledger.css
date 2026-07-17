@@ -1,0 +1,74 @@
+/* artifacts/mockup-sandbox/src/components/mockups/hero-mobile/Ledger.css */
+
+.variant-ledger .ledger-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: 36px auto 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.variant-ledger .ledger-row {
+  display: flex;
+  align-items: center;
+  padding: 14px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 16px;
+  text-align: left;
+}
+
+.variant-ledger .ledger-row svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--green);
+  opacity: 0.9;
+}
+
+.variant-ledger .ledger-row span {
+  font-family: var(--head);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 480px) {
+  .variant-ledger .hero {
+    /* Adjust padding to comfortably fit rows without clipping the bottom */
+    padding: 40px 0 100px;
+  }
+  
+  .variant-ledger .hero-logo {
+    width: min(220px, 75vw); /* Slightly smaller logo to give space to the ledger */
+    margin-bottom: 24px;
+  }
+  
+  .variant-ledger .hero h1 {
+    font-size: clamp(2.8rem, 7.4vw, 5.7rem);
+  }
+  
+  .variant-ledger .ledger-container {
+    margin-top: 32px;
+  }
+  
+  .variant-ledger .ledger-row {
+    padding: 13px 4px;
+    gap: 14px;
+  }
+
+  .variant-ledger .ledger-row svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .variant-ledger .ledger-row span {
+    font-size: 0.9rem;
+  }
+  
+  .variant-ledger .hero-cta {
+    margin-top: 36px;
+  }
+}
