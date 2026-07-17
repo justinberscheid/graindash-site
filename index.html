@@ -57,11 +57,11 @@ nav{display:flex;align-items:center;justify-content:space-between;height:68px;ga
 .navcta{font-size:.86rem;padding:9px 16px;border-radius:9px;}.cta-short{display:none;}.cta-full{display:inline;}
 
 /* hero */
-.hero{position:relative;overflow:hidden;padding:118px 0 clamp(150px,17vw,240px);}
-.hero-glow{position:absolute;top:-180px;left:50%;width:min(1320px,150vw);height:840px;opacity:.6;pointer-events:none;backface-visibility:hidden;transform:translate3d(-50%,0,0);z-index:0;background:radial-gradient(48% 54% at 66% 30%,rgba(44,193,78,.22),rgba(44,193,78,.05) 48%,transparent 74%),radial-gradient(44% 50% at 32% 40%,rgba(61,232,76,.12),rgba(61,232,76,.03) 46%,transparent 70%);}
-.gridoverlay{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(40,189,53,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(40,189,53,.05) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent 75%);-webkit-mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent 75%);}
-.hero-field{position:absolute;left:0;right:0;bottom:0;height:clamp(240px,21vw,420px);z-index:0;pointer-events:none;background:url('assets/hero-field-golden.png') center 58%/cover no-repeat;opacity:.9;}
-.hero-field::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,rgba(11,11,11,.5) 34%,rgba(11,11,11,.12) 70%,rgba(11,11,11,.45) 100%);}
+.hero{position:relative;overflow:hidden;padding:118px 0 clamp(150px,17vw,240px);background:linear-gradient(160deg,#0d1310 0%,#080a09 58%,#0a0f0b 100%);}
+.hero-glow{position:absolute;inset:0;opacity:1;pointer-events:none;z-index:0;background:radial-gradient(70% 80% at 82% 10%,rgba(44,193,78,.20),rgba(44,193,78,0) 44%),radial-gradient(70% 90% at 14% 90%,rgba(44,193,78,.11),rgba(44,193,78,0) 46%);}
+.gridoverlay{position:absolute;inset:0;z-index:0;background-image:radial-gradient(rgba(255,255,255,.05) 1.3px,transparent 1.3px);background-size:30px 30px;mask-image:linear-gradient(180deg,#000 0%,transparent 72%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 72%);}
+.hero-field{position:absolute;left:0;right:0;bottom:0;height:clamp(240px,21vw,420px);z-index:0;pointer-events:none;background:url('assets/hero-field-golden.png') center 56%/cover no-repeat;opacity:.5;-webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,.7) 100%);mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,.7) 100%);}
+.hero-field::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(10,15,11,.4) 55%,rgba(8,10,9,.9) 100%);}
 .hero-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;}
 .hero-logo{width:min(400px,72vw);height:auto;margin-bottom:30px;filter:drop-shadow(0 8px 26px rgba(0,0,0,.5));}
 .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(3rem,7.4vw,5.7rem);line-height:0.9;letter-spacing:0.035em;}
