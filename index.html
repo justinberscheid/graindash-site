@@ -285,6 +285,7 @@ html.js .phone.sc-anim.in{transform:none;}
   .hero-chips{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;width:100%;margin-top:36px;}
   .chip{flex-direction:column;justify-content:center;text-align:center;gap:12px;padding:16px 10px;border-radius:8px;font-size:.85rem;line-height:1.3;color:#e2e8df;background:rgba(20,21,19,.5);border-color:rgba(255,255,255,.08);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.3);text-wrap:balance;}
   .chip svg{width:22px;height:22px;stroke:var(--green-hi);opacity:.9;}
+  .hero-chips .chip:last-child{grid-column:1/-1;}
   .dl-badge{width:100%;max-width:320px;justify-content:center;}
   .navlogo img{height:28px;}
 }
@@ -342,6 +343,7 @@ html.js .phone.sc-anim.in{transform:none;}
       <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#3DE84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4v16h18"/><path d="M6 15l4-4 3 2 5-6"/></svg>Break-Even</span>
       <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#3DE84C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Fields &amp; Records</span>
       <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#3DE84C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h5"/></svg>Report Generation</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#3DE84C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Employees &amp; Payroll</span>
       <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#3DE84C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-8"/><path d="M12 13c0-3.2 2.2-5.2 6.2-5.2C18.2 11 16 13.6 12 13z"/><path d="M12 15.5c0-2.8-2-4-5-4 0 2.8 2 4.6 5 4z"/></svg>Scout AI Assistant</span>
     </div>
     <div class="hero-cta">
@@ -389,6 +391,7 @@ html.js .phone.sc-anim.in{transform:none;}
         <li><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Hours digging through paperwork, trying to get ready for that accountant meeting.</li>
         <li><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Missed pricing opportunities.</li>
         <li><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Guesswork instead of data.</li>
+        <li><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg> Paper timesheets and end-of-month payroll arithmetic.</li>
       </ul>
     </div>
     <div class="ps-card sol" data-reveal>
@@ -398,6 +401,7 @@ html.js .phone.sc-anim.in{transform:none;}
         <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Know your break-even on every commodity, instantly.</li>
         <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Smart reminders so you never miss another opportunity.</li>
         <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Model land deals and crop margins with real, multi-year data.</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Every hour logged at the source — payroll adds itself up.</li>
       </ul>
     </div>
   </div>
@@ -414,6 +418,7 @@ html.js .phone.sc-anim.in{transform:none;}
       <div class="feat" data-reveal><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="tag">Profitability</div><h3>Cost of Production</h3><p>Detailed per-crop cost breakdowns with profitability charts. Centralize fixed costs and your land-cost structure for a true break-even.</p></div>
       <div class="feat" data-reveal><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div><div class="tag">Visual</div><h3>Bin Yard</h3><p>A drag-and-drop layout of your bins — capacity, bushels stored, grain quality (protein, moisture, notes), and aeration logging at a glance.</p></div>
       <div class="feat" data-reveal><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 3L3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg></div><div class="tag">By Crop Year</div><h3>Field Records</h3><p>Log seeding, spraying, harvest, and scouting records per field — a complete, organized history for every acre, every crop year.</p></div>
+      <div class="feat" data-reveal><div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="tag">Hours & Pay</div><h3>Employees & Payroll</h3><p>Everyone logs their own hours — shifts, breaks, and notes on what got done. Set a rate per person and payroll adds itself up: hours, cost, every shift. Employees see only their own time; pay stays with you.</p></div>
       <div class="feat" data-reveal><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg></div><div class="tag">On Hand</div><h3>Inventory Tracking</h3><p>Always know exactly how much grain you have on hand, by commodity and crop year — no more counting bins in your head.</p></div>
       <div class="feat" data-reveal><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><div class="tag">Multi-Year</div><h3>Scenario Planner</h3><p>Model renting or buying land and experiment with crop margins. Compare scenarios side-by-side with per-parcel margins before you commit.</p></div>
       <div class="feat" data-reveal><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><div class="tag">Live Data</div><h3>Live Market Data</h3><p>Quick access to live futures — canola, spring wheat, and more — so the market is always a glance away while you plan.</p></div>
@@ -430,7 +435,7 @@ html.js .phone.sc-anim.in{transform:none;}
     <ul class="scout-list">
       <li><div class="si"><svg viewBox="0 0 24 24"><path d="M8 10h8M8 14h5"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg></div><div><b>Answers your questions</b><span>"What's my break-even on canola?" "How much wheat is left to sell?" Scout knows.</span></div></li>
       <li><div class="si"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 3 2 5 2 7h10c0-2 2-4 2-7a7 7 0 00-7-7z"/><path d="M9 21h6"/></svg></div><div><b>Surfaces smart reminders</b><span>Expiring target prices, passed delivery months, and storage shortfalls — flagged before they cost you.</span></div></li>
-      <li><div class="si"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div><div><b>Generates custom reports</b><span>Polished PDF & Excel reports for the banker, the accountant, or your own records — in seconds.</span></div></li>
+      <li><div class="si"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div><div><b>Generates custom reports</b><span>Polished PDF & Excel reports for the banker, the accountant, or payroll day — in seconds.</span></div></li>
     </ul>
   </div>
   <div class="scout-card" data-reveal>
@@ -496,6 +501,7 @@ html.js .phone.sc-anim.in{transform:none;}
         <li class="pr-item"><svg class="chk" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Full Scout assistant - reports, paper blends, profitability comparisons & more</span></li>
         <li class="pr-item"><svg class="chk" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Report Generation (PDF & Excel)</span></li>
         <li class="pr-item"><svg class="chk" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Scenario Planner</span></li>
+        <li class="pr-item"><svg class="chk" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Employees & Payroll — hours, rates & pay totals</span></li>
         <li class="pr-item"><svg class="chk" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Unlimited farm seats</span></li>
         <li class="pr-item"><svg class="chk" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Lifetime support</span></li>
       </ul>
@@ -516,6 +522,7 @@ html.js .phone.sc-anim.in{transform:none;}
         <li class="pr-item lk"><svg class="lkc" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><span>Full Scout assistant - reports, paper blends, profitability comparisons & more</span></li>
         <li class="pr-item lk"><svg class="lkc" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><span>Report Generation (PDF & Excel)</span></li>
         <li class="pr-item lk"><svg class="lkc" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><span>Scenario Planner</span></li>
+        <li class="pr-item lk"><svg class="lkc" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><span>Employees & Payroll — hours, rates & pay totals</span></li>
         <li class="pr-item lk"><svg class="lkc" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><span>Unlimited farm seats</span></li>
         <li class="pr-item lk"><svg class="lkc" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><span>Lifetime support</span></li>
       </ul>
