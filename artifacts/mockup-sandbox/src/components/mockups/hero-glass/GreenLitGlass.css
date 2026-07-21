@@ -1,0 +1,187 @@
+/* Green Lit Glass - Apple Liquid Glass feel with farm green inner glow */
+
+.glass-green-lit .fg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.glass-green-lit .fg-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 22px 12px;
+  background: linear-gradient(160deg, rgba(22, 28, 22, 0.45) 0%, rgba(10, 14, 10, 0.55) 100%);
+  backdrop-filter: blur(28px) saturate(150%);
+  -webkit-backdrop-filter: blur(28px) saturate(150%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 12px 32px -6px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
+    inset 0 0 24px 0 rgba(40, 189, 53, 0.04),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.02);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+/* Inner ambient green bleed */
+.glass-green-lit .fg-tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% -20%, rgba(40, 189, 53, 0.2), transparent 75%);
+  opacity: 0.7;
+  pointer-events: none;
+  transition: opacity 0.4s ease, background 0.4s ease;
+}
+
+/* Glass shine reflection */
+.glass-green-lit .fg-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, transparent 40%, transparent 100%);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.glass-green-lit .fg-tile:hover {
+  transform: translateY(-4px) scale(1.01);
+  background: linear-gradient(160deg, rgba(26, 34, 26, 0.5) 0%, rgba(12, 18, 12, 0.6) 100%);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 20px 48px -8px rgba(0, 0, 0, 0.8),
+    0 0 24px -6px rgba(40, 189, 53, 0.15),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.25),
+    inset 0 0 32px 0 rgba(40, 189, 53, 0.08),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.04);
+}
+
+.glass-green-lit .fg-tile:hover::before {
+  opacity: 1;
+  background: radial-gradient(ellipse at 50% -10%, rgba(40, 189, 53, 0.3), transparent 80%);
+}
+
+.glass-green-lit .fg-tile span {
+  font-family: var(--head);
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.3;
+  color: #f1f5ef;
+  text-wrap: balance;
+  letter-spacing: 0.015em;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.glass-green-lit .fg-tile svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--green-hi);
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 2px 8px rgba(61, 232, 76, 0.5));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.glass-green-lit .fg-tile:hover svg {
+  transform: scale(1.08) translateY(-1px);
+  filter: drop-shadow(0 4px 12px rgba(61, 232, 76, 0.8));
+}
+
+.glass-green-lit .fg-tile:last-child {
+  grid-column: 1 / -1;
+}
+
+/* Echo the material on Buttons */
+.glass-green-lit .hero-cta {
+  display: flex;
+  gap: 14px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.glass-green-lit .btn.primary {
+  background: linear-gradient(180deg, rgba(61, 232, 76, 0.75), rgba(40, 189, 53, 0.55));
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  color: #051a08;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 8px 20px -4px rgba(40, 189, 53, 0.4),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 2px 0 rgba(0, 50, 10, 0.25);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 700;
+}
+
+.glass-green-lit .btn.primary:hover {
+  background: linear-gradient(180deg, rgba(61, 232, 76, 0.85), rgba(40, 189, 53, 0.65));
+  box-shadow: 
+    0 12px 28px -4px rgba(40, 189, 53, 0.5),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.65),
+    inset 0 -1px 2px 0 rgba(0, 50, 10, 0.3);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.glass-green-lit .btn.primary:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 4px 12px -2px rgba(40, 189, 53, 0.4),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 1px 0 rgba(0, 50, 10, 0.2);
+}
+
+.glass-green-lit .btn.ghost {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8df;
+  border-radius: 12px;
+  box-shadow: 
+    0 4px 16px -4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 600;
+}
+
+.glass-green-lit .btn.ghost:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: 
+    0 8px 24px -4px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.glass-green-lit .btn.ghost:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 4px 12px -4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+@media(max-width:480px){
+  .glass-green-lit .fg-grid{gap:10px;margin-top:32px;}
+  .glass-green-lit .fg-tile{padding:18px 10px;gap:10px;border-radius:14px;}
+  .glass-green-lit .fg-tile span{font-size:.82rem;}
+  .glass-green-lit .fg-tile svg{width:24px;height:24px;}
+  .glass-green-lit .hero-cta{margin-top:40px;gap:12px;}
+}
