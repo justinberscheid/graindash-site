@@ -36,3 +36,7 @@ outputType = "webview"
 task = "shell.exec"
 args = "python3 server.py"
 waitForPort = 5000
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 30000
