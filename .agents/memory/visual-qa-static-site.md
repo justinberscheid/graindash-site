@@ -18,3 +18,6 @@ description: How to verify visual changes on the single-file marketing site give
 The user's device-mockup PNGs carry a near-invisible alpha veil (alpha ~1-10) across the whole canvas, plus wide baked glow. A plain crop cuts mid-veil and shows a rectangle edge on dark bgs.
 **Fix (rebuild from original attachment):** silhouette mask — `-alpha extract` → `-threshold 50% -morphology Dilate Disk:5 -blur 0x2.5` → Multiply into alpha → CopyOpacity → `-channel A -level 3%,100%` → `-trim`. Keeps device + natural AA edge, zeroes everything else; CSS drop-shadow replaces baked shadow.
 **Verify:** corner pixel alpha = 0, plus zoomed scratch page on site-dark AND lighter gray bg (veil invisible on one bg can show on another).
+
+## Retina resolution rule for device renders
+Export device-render PNGs at ~2x their largest CSS display size, or they look soft/blurry on high-DPI screens even though they look fine in 1x screenshots. **Why:** the digest phone displayed ~290px wide from a 455px asset (580px retina needed) and the user saw it as "not polished" vs the hero showcase phone shown at 218px. **How to apply:** before processing a render, check its max CSS display width/height, double it, and resize from the full-res source (attached_assets originals are 1500×2700).
