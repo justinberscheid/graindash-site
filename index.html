@@ -31,7 +31,7 @@ body{
 img{max-width:100%;display:block;}
 a{text-decoration:none;color:inherit;}
 ul{list-style:none;}
-h1,h2,h3,h4{font-family:var(--head);font-weight:800;line-height:1.08;letter-spacing:-0.01em;}.hero h1,.shead h2,.scout h2,.final h2{text-transform:uppercase;letter-spacing:0.01em;}
+h1,h2,h3,h4{font-family:var(--head);font-weight:800;line-height:1.08;letter-spacing:-0.01em;}.hero h1,.shead h2,.scout h2,.digest h2,.final h2{text-transform:uppercase;letter-spacing:0.01em;}
 .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 24px;}
 .grad{color:var(--green);}
 .eyebrow{display:inline-block;font-family:var(--head);font-weight:700;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:14px;}
@@ -106,6 +106,14 @@ section.block{padding:88px 0;position:relative;}
 .feat h3{font-size:1.2rem;margin-bottom:10px;}
 .feat p{color:var(--muted);font-size:.98rem;line-height:1.6;}
 
+/* digest */
+.digest{position:relative;overflow:hidden;}
+.digest-glow{position:absolute;top:10%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(40,189,53,.1),rgba(40,189,53,.03) 45%,transparent 72%);pointer-events:none;}
+.digest-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.digest h2{font-size:clamp(1.8rem,3.6vw,2.6rem);}
+.digest .lead{margin:18px 0 26px;color:var(--muted);font-size:1.1rem;}
+.digest-phone{display:flex;justify-content:center;align-items:center;}
+.digest-phone img{width:100%;max-width:320px;filter:drop-shadow(0 30px 50px rgba(0,0,0,.65));}
 /* scout */
 .scout{position:relative;overflow:hidden;}
 .scout-glow{position:absolute;top:10%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(40,189,53,.1),rgba(40,189,53,.03) 45%,transparent 72%);pointer-events:none;}
@@ -244,6 +252,8 @@ html.js .phone.sc-anim.in{transform:none;}
   .feats{grid-template-columns:repeat(2,1fr);}
   .tgrid{grid-template-columns:repeat(2,1fr);}
   .scout-grid{grid-template-columns:1fr;gap:34px;}
+  .digest-grid{grid-template-columns:1fr;gap:34px;}
+  .digest-phone img{max-width:260px;}
 }
 @media(max-width:760px){
   body{font-size:16px;}
@@ -403,6 +413,23 @@ html.js .phone.sc-anim.in{transform:none;}
       <div class="feat" data-reveal><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/><path d="M17 14l2.5 2.5M19 12l2-2"/></svg></div><div class="tag">Daily Email</div><h3>Daily Digest</h3><p>Every morning, a 2–3 minute read straight to your inbox. Market insights, charts, and tailored recommendations for your farm.</p></div>
       <div class="feat" data-reveal><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="tag">In Sync</div><h3>Works Everywhere</h3><p>Web, desktop, iPhone, and Android — full feature parity, always in sync. Plan at the desk, check the numbers from the cab.</p></div>
     </div>
+</div></section>
+
+<section class="block digest" id="digest" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);"><div class="digest-glow"></div><div class="wrap digest-grid">
+  <div data-reveal>
+    <span class="eyebrow">Daily Digest</span>
+    <h2>Your market edge.<br/><span class="grad">Every morning.</span></h2>
+    <p class="lead">Daily Digest lands in your inbox every morning — prices, charts, sentiment gauges, and your AI Scout insight. All in one 2-minute read.</p>
+    <ul class="scout-list">
+      <li><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg></div><div><b>Live Market Sentiment</b><span>Bullish or bearish? A scored read on grain and input markets every morning before you plan your day.</span></div></li>
+      <li><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><div><b>Daily Grain Prices</b><span>Canola, wheat, lentils and more — current futures prices with your crops front and centre.</span></div></li>
+      <li><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 4 4 .5-3 3 1 4-4-2-4 2 1-4-3-3 4-.5z"/></svg></div><div><b>AI Scout Insight</b><span>Scout reads your numbers and the market, then tells you what matters for your farm today.</span></div></li>
+      <li><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div><b>Input Cost Updates</b><span>Fertilizer, fuel, and crop input trends — so your cost of production stays current, not last year's guess.</span></div></li>
+    </ul>
+  </div>
+  <div class="digest-phone" data-reveal>
+    <img src="assets/phone-digest.png" alt="GrainDash Daily Digest on an iPhone" loading="lazy" width="455" height="918"/>
+  </div>
 </div></section>
 
 <section class="block scout" id="scout"><div class="scout-glow"></div><div class="wrap scout-grid">
