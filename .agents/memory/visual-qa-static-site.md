@@ -21,3 +21,6 @@ The user's device-mockup PNGs carry a near-invisible alpha veil (alpha ~1-10) ac
 
 ## Retina resolution rule for device renders
 Export device-render PNGs at ~2x their largest CSS display size, or they look soft/blurry on high-DPI screens even though they look fine in 1x screenshots. **Why:** the digest phone displayed ~290px wide from a 455px asset (580px retina needed) and the user saw it as "not polished" vs the hero showcase phone shown at 218px. **How to apply:** before processing a render, check its max CSS display width/height, double it, and resize from the full-res source (attached_assets originals are 1500×2700).
+
+## Baked-in ground shadows in device renders
+Original renders can include a semi-opaque ground shadow below the device; a threshold-50% silhouette mask keeps it, showing a "black blob" on the page. **How to apply:** raise the alpha threshold (~65%) and keep only the largest connected component (`-define connected-components:area-threshold=5000 -define connected-components:mean-color=true -connected-components 8`) before dilate/blur. Also: single blurred radial gradients look cheap/bandy for glows — layer 2-3 radial-gradients at decreasing alpha with no blur filter instead.

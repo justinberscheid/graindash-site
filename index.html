@@ -108,12 +108,15 @@ section.block{padding:88px 0;position:relative;}
 
 /* digest */
 .digest{position:relative;overflow:hidden;}
-.digest-glow{position:absolute;top:50%;right:2%;transform:translateY(-50%);width:620px;height:760px;background:radial-gradient(ellipse at center,rgba(40,189,53,.26),rgba(40,189,53,.06) 55%,transparent 72%);filter:blur(20px);pointer-events:none;}
+.digest-glow{position:absolute;top:50%;right:0;transform:translateY(-50%);width:780px;height:900px;pointer-events:none;background:
+  radial-gradient(ellipse 42% 38% at 52% 50%,rgba(64,224,94,.18),transparent 68%),
+  radial-gradient(ellipse 68% 62% at 50% 52%,rgba(40,189,53,.09),transparent 72%),
+  radial-gradient(ellipse 95% 90% at 50% 55%,rgba(40,189,53,.045),transparent 78%);}
 .digest-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
 .digest h2{font-size:clamp(1.8rem,3.6vw,2.6rem);}
 .digest .lead{margin:18px 0 26px;color:var(--muted);font-size:1.1rem;}
 .digest-phone{display:flex;justify-content:center;align-items:center;}
-.digest-phone img{height:clamp(420px,52vh,580px);width:auto;max-width:100%;filter:drop-shadow(0 24px 44px rgba(0,0,0,.7));}
+.digest-phone img{height:clamp(420px,52vh,580px);width:auto;max-width:100%;filter:drop-shadow(0 14px 30px rgba(0,0,0,.45)) drop-shadow(0 40px 80px rgba(0,0,0,.3));}
 html.js .digest-phone.sc-anim{transform:translateY(40px) translateX(28px) scale(.96);transition-delay:.12s;}
 html.js .digest-phone.sc-anim.in{transform:none;}
 /* scout */
@@ -257,7 +260,7 @@ html.js .phone.sc-anim.in{transform:none;}
   .digest-grid{grid-template-columns:1fr;gap:28px;}
   .digest-phone{justify-content:center;}
   .digest-phone img{height:clamp(380px,95vw,480px);width:auto;max-width:90%;}
-  .digest-glow{top:auto;bottom:0;right:50%;transform:translate(50%,20%);width:420px;height:520px;}
+  .digest-glow{top:auto;bottom:0;right:50%;transform:translate(50%,15%);width:480px;height:600px;}
 }
 @media(max-width:760px){
   body{font-size:16px;}
@@ -275,7 +278,7 @@ html.js .phone.sc-anim.in{transform:none;}
   .foot-top{grid-template-columns:1fr 1fr;gap:26px;}
   .hero-cta .btn{width:100%;}
   .hero-logo{width:min(320px,80vw);margin-bottom:24px;}
-  .hero-chips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%;margin-top:40px;}
+  .hero-chips{display:grid;grid-template-columns:1fr;gap:12px;width:100%;margin-top:40px;}
   .chip{position:relative;overflow:hidden;flex-direction:column;justify-content:center;text-align:center;gap:12px;padding:22px 12px;border-radius:16px;font-size:.88rem;line-height:1.3;letter-spacing:.015em;color:#f1f5ef;text-shadow:0 2px 4px rgba(0,0,0,.6);background:linear-gradient(160deg,rgba(22,28,22,.45) 0%,rgba(10,14,10,.55) 100%);border-color:rgba(255,255,255,.08);-webkit-backdrop-filter:blur(28px) saturate(150%);backdrop-filter:blur(28px) saturate(150%);box-shadow:0 12px 32px -6px rgba(0,0,0,.6),inset 0 1px 0 0 rgba(255,255,255,.15),inset 0 0 24px 0 rgba(40,189,53,.04),inset 0 -1px 0 0 rgba(255,255,255,.02);text-wrap:balance;}
   .chip::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% -20%,rgba(40,189,53,.2),transparent 75%);opacity:.7;pointer-events:none;}
   .chip::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.08) 0%,transparent 40%);opacity:.6;pointer-events:none;}
@@ -433,7 +436,7 @@ html.js .phone.sc-anim.in{transform:none;}
     </ul>
   </div>
   <div class="digest-phone sc-anim" data-reveal>
-    <img src="assets/phone-digest.png" alt="GrainDash Daily Digest on an iPhone" loading="lazy" width="656" height="1315"/>
+    <img src="assets/phone-digest.png" alt="GrainDash Daily Digest on an iPhone" loading="lazy" width="650" height="1290"/>
   </div>
 </div></section>
 
