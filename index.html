@@ -61,7 +61,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:68px;ga
 .hero-glow{position:absolute;inset:0;opacity:1;pointer-events:none;z-index:0;background:radial-gradient(70% 80% at 82% 10%,rgba(44,193,78,.20),rgba(44,193,78,0) 44%),radial-gradient(70% 90% at 14% 90%,rgba(44,193,78,.11),rgba(44,193,78,0) 46%);}
 .gridoverlay{position:absolute;inset:0;z-index:0;background-image:radial-gradient(rgba(255,255,255,.05) 1.3px,transparent 1.3px);background-size:30px 30px;mask-image:linear-gradient(180deg,#000 0%,transparent 72%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 72%);}
 .hero-field{position:absolute;left:0;right:0;bottom:0;height:clamp(240px,21vw,420px);z-index:0;pointer-events:none;background:url('assets/hero-field-golden.png') center 56%/cover no-repeat;opacity:.5;-webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,.7) 100%);mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,.7) 100%);}
-.hero-field::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(10,15,11,.4) 55%,rgba(8,10,9,.9) 100%);}
+.hero-field::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(10,15,11,.45) 55%,rgba(8,10,9,.75) 82%,#080a09 98%);}
 .hero-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;}
 .hero-logo{width:min(400px,72vw);height:auto;margin-bottom:30px;filter:drop-shadow(0 8px 26px rgba(0,0,0,.5));}
 .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(3rem,7.4vw,5.7rem);line-height:0.9;letter-spacing:0.035em;}
@@ -292,6 +292,7 @@ html.js .phone.sc-anim.in{transform:none;}
   .navlogo img{height:22px;}
   nav{height:60px;gap:10px;}
   .hero{padding:44px 0 140px;}
+  .hero-field{height:280px;background-position:center 74%;}
   .hero-logo{width:min(250px,84vw);}
   .hero-chips{gap:10px;margin-top:32px;}
   .chip{padding:18px 10px;gap:10px;border-radius:14px;font-size:.82rem;}
