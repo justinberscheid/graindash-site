@@ -113,7 +113,9 @@ section.block{padding:88px 0;position:relative;}
 .digest h2{font-size:clamp(1.8rem,3.6vw,2.6rem);}
 .digest .lead{margin:18px 0 26px;color:var(--muted);font-size:1.1rem;}
 .digest-phone{display:flex;justify-content:center;align-items:center;}
-.digest-phone img{width:100%;max-width:320px;filter:drop-shadow(0 30px 50px rgba(0,0,0,.65));}
+.digest-phone img{width:100%;max-width:420px;filter:drop-shadow(0 30px 50px rgba(0,0,0,.65));}
+html.js .digest-phone.sc-anim{transform:translateY(40px) translateX(28px) scale(.96);transition-delay:.12s;}
+html.js .digest-phone.sc-anim.in{transform:none;}
 /* scout */
 .scout{position:relative;overflow:hidden;}
 .scout-glow{position:absolute;top:10%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(40,189,53,.1),rgba(40,189,53,.03) 45%,transparent 72%);pointer-events:none;}
@@ -428,7 +430,7 @@ html.js .phone.sc-anim.in{transform:none;}
       <li><div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div><b>Input Cost Updates</b><span>Fertilizer, fuel, and crop input trends — so your cost of production stays current, not last year's guess.</span></div></li>
     </ul>
   </div>
-  <div class="digest-phone" data-reveal>
+  <div class="digest-phone sc-anim" data-reveal>
     <img src="assets/phone-digest.png" alt="GrainDash Daily Digest on an iPhone" loading="lazy" width="455" height="918"/>
   </div>
 </div></section>
