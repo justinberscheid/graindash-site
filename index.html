@@ -278,12 +278,14 @@ html.js .phone.sc-anim.in{transform:none;}
   .foot-top{grid-template-columns:1fr 1fr;gap:26px;}
   .hero-cta .btn{width:100%;}
   .hero-logo{width:min(320px,80vw);margin-bottom:24px;}
-  .hero-chips{display:grid;grid-template-columns:1fr;gap:12px;width:100%;margin-top:40px;}
-  .chip{position:relative;overflow:hidden;flex-direction:column;justify-content:center;text-align:center;gap:11px;padding:20px 12px;border-radius:18px;font-size:.88rem;line-height:1.3;letter-spacing:.01em;color:#e9eee9;text-shadow:none;background:linear-gradient(180deg,rgba(16,20,16,.62) 0%,rgba(8,11,9,.66) 100%);border:1px solid rgba(255,255,255,.06);-webkit-backdrop-filter:blur(22px) saturate(130%);backdrop-filter:blur(22px) saturate(130%);box-shadow:0 10px 28px -10px rgba(0,0,0,.65),inset 0 1px 0 0 rgba(255,255,255,.08),inset 0 -1px 0 0 rgba(0,0,0,.35);text-wrap:balance;}
-  .chip::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.045) 0%,transparent 24%);pointer-events:none;}
+  .hero-chips{display:flex;flex-direction:column;gap:0;width:100%;margin-top:38px;padding:5px 0;border-radius:22px;background:linear-gradient(180deg,rgba(15,19,15,.58) 0%,rgba(8,11,9,.62) 100%);border:1px solid rgba(255,255,255,.07);-webkit-backdrop-filter:blur(24px) saturate(135%);backdrop-filter:blur(24px) saturate(135%);box-shadow:0 20px 44px -20px rgba(0,0,0,.75),inset 0 1px 0 0 rgba(255,255,255,.07);overflow:hidden;}
+  .chip{position:relative;flex-direction:row;justify-content:flex-start;text-align:left;gap:14px;padding:13px 18px;border:0;border-radius:0;font-size:.93rem;line-height:1.3;letter-spacing:.01em;color:#eef2ee;text-shadow:none;background:none;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;}
+  .chip+.chip::before{content:"";position:absolute;top:0;left:68px;right:18px;height:1px;background:rgba(255,255,255,.055);pointer-events:none;}
   .chip::after{content:none;}
-  .chip svg{width:24px;height:24px;stroke:var(--green-hi);position:relative;z-index:2;filter:drop-shadow(0 0 9px rgba(61,232,76,.28));}
-  .hero-chips .chip:last-child{grid-column:1/-1;}
+  .chip svg{width:36px;height:36px;padding:8px;box-sizing:border-box;flex-shrink:0;stroke:var(--green-hi);background:rgba(40,189,53,.08);border:1px solid rgba(40,189,53,.2);border-radius:11px;filter:none;}
+  @keyframes chipIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
+  html.js .hero-chips .chip{animation:chipIn .55s cubic-bezier(.2,.7,.3,1) backwards;}
+  html.js .hero-chips .chip:nth-child(1){animation-delay:.05s;}html.js .hero-chips .chip:nth-child(2){animation-delay:.11s;}html.js .hero-chips .chip:nth-child(3){animation-delay:.17s;}html.js .hero-chips .chip:nth-child(4){animation-delay:.23s;}html.js .hero-chips .chip:nth-child(5){animation-delay:.29s;}html.js .hero-chips .chip:nth-child(6){animation-delay:.35s;}html.js .hero-chips .chip:nth-child(7){animation-delay:.41s;}html.js .hero-chips .chip:nth-child(8){animation-delay:.47s;}
   .dl-badge{width:100%;max-width:320px;justify-content:center;}
   .navlogo img{height:28px;}
 }
@@ -294,9 +296,10 @@ html.js .phone.sc-anim.in{transform:none;}
   .hero{padding:44px 0 140px;}
   .hero-field{height:280px;background-position:center 74%;}
   .hero-logo{width:min(250px,84vw);}
-  .hero-chips{gap:10px;margin-top:32px;}
-  .chip{padding:18px 10px;gap:10px;border-radius:14px;font-size:.82rem;}
-  .chip svg{width:24px;height:24px;}
+  .hero-chips{margin-top:32px;border-radius:20px;}
+  .chip{padding:12px 16px;gap:13px;font-size:.88rem;}
+  .chip+.chip::before{left:62px;right:16px;}
+  .chip svg{width:33px;height:33px;padding:7px;}
   .hero-cta{margin-top:36px;}
   .foot-top{grid-template-columns:1fr;}
   .foot-bottom{flex-direction:column;}
@@ -304,7 +307,7 @@ html.js .phone.sc-anim.in{transform:none;}
 }
 @supports not ((-webkit-backdrop-filter:blur(6px)) or (backdrop-filter:blur(6px))){
   .btn.ghost{background:rgba(38,40,36,.92);}
-  @media(max-width:760px){.chip{background:linear-gradient(180deg,rgba(14,18,14,.96),rgba(8,11,9,.97));}}
+  @media(max-width:760px){.hero-chips{background:linear-gradient(180deg,rgba(14,18,14,.96),rgba(8,11,9,.97));}}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none !important;}
