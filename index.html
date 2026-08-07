@@ -633,15 +633,15 @@ html.js .phone.sc-anim.in{transform:none;}
 
 
 <script>
-var annual=false;var MONTHLY=35,ANNUAL_MO=29.99;
+var annual=false;var MONTHLY=35,ANNUAL_MO=29.58;
 function setBilling(v){
   annual=v;
   document.getElementById('btnYr').classList.toggle('on',annual);
   document.getElementById('btnMo').classList.toggle('on',!annual);
   var amt=document.getElementById('amt'),per=document.getElementById('per'),billed=document.getElementById('billed'),pill=document.getElementById('savepill'),pop=document.getElementById('entpop');
   if(annual){
-    amt.textContent='$29.99';per.textContent='/month';
-    billed.innerHTML='Billed annually at <b>$359.88/year</b>.';
+    amt.textContent='$29.58';per.textContent='/month';
+    billed.innerHTML='Billed annually at <b>$354.99/year</b>.';
     pill.style.display='inline-block';
     pop.textContent='Best Value';
   }else{
