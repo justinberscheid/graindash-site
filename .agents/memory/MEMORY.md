@@ -2,3 +2,4 @@
 - [Dev preview caching gotcha](dev-preview-caching.md) — bare http.server has no Cache-Control, so the user's preview pane heuristic-caches stale pages; must serve via server.py (no-store).
 - [Mockup sandbox in non-Node projects](mockup-sandbox-non-node-projects.md) — BOOTSTRAP_FAILED means no node binary: install nodejs module, retry createArtifact, npm install, restart all workflows.
 - [Canvas iframe routing & failed states](canvas-iframe-routing.md) — bare-domain /__mockup URLs work (platform path-routing); 5000-port 404s are misfired screenshots; restarts flip frames to failed — reset to live.
+- [GitHub push authentication](github-push-auth.md) — local commits can succeed while the remote remains unauthenticated; verify origin/main after every push attempt.
