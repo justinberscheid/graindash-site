@@ -180,6 +180,8 @@ html.js .digest-phone.sc-anim.in{transform:none;}
 .pr-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:880px;margin:0 auto;align-items:start;}
 .pr-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:34px 30px;position:relative;}
 .pr-card.ent{border-color:rgba(40,189,53,.5);box-shadow:0 16px 50px rgba(40,189,53,.12);}
+.pr-card.plan-pro{order:1;}
+.pr-card.plan-enterprise{order:2;}
 .pr-pop{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,var(--green-hi),var(--green));color:#06210a;font-family:var(--head);font-weight:700;font-size:.78rem;padding:5px 16px;border-radius:20px;white-space:nowrap;}
 .pr-name{font-family:var(--head);font-weight:800;font-size:1.5rem;margin-bottom:6px;}
 .pr-sub{color:var(--muted);font-size:.95rem;margin-bottom:20px;}
@@ -541,7 +543,7 @@ html.js .phone.sc-anim.in{transform:none;}
     <p>Start with a 14-day free trial — no credit card required. Then choose the plan that fits your operation.</p>
   </div>
   <div class="pr-grid">
-    <div class="pr-card ent" data-reveal>
+    <div class="pr-card ent plan-enterprise" data-reveal>
       <div class="pr-name">Enterprise</div>
       <div class="pr-sub">Core farm management tools, all in one place.</div>
       <div class="pr-price"><span class="pr-amt">$35</span><span class="pr-per">/month CAD</span></div>
@@ -557,7 +559,7 @@ html.js .phone.sc-anim.in{transform:none;}
         <li class="pr-item"><svg class="chk" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Basic Scout answers &amp; logging</span></li>
       </ul>
     </div>
-    <div class="pr-card ent" data-reveal>
+    <div class="pr-card ent plan-pro" data-reveal>
       <div class="pr-pop" id="entpop">Most Popular</div>
       <div class="pr-name">Enterprise Pro</div>
       <div class="pr-sub">Everything in Enterprise, fully unlocked.</div>
