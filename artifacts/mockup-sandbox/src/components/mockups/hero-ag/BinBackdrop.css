@@ -1,0 +1,56 @@
+.bin-backdrop.hero{isolation:isolate;min-height:100vh;padding:40px 0 54px;background:#0c100e;overflow:hidden}
+.bin-backdrop .bb-yard,.bin-backdrop .bb-vignette{position:absolute;inset:0;pointer-events:none}
+.bin-backdrop .bb-yard{z-index:-3;background:url('/__mockup/images/bin-yard-backdrop.png') center/cover no-repeat;transform:scale(1.02)}
+.bin-backdrop .bb-vignette{z-index:-2;background:linear-gradient(90deg,rgba(7,11,9,.83) 0%,rgba(7,11,9,.48) 46%,rgba(7,11,9,.24) 100%),linear-gradient(180deg,rgba(7,11,9,.62),rgba(7,11,9,.08) 31%,rgba(7,11,9,.38) 61%,#080b09 100%)}
+.bin-backdrop .bb-rim{position:absolute;z-index:-1;pointer-events:none;border:1px solid rgba(40,189,53,.48);filter:drop-shadow(0 0 8px rgba(40,189,53,.12))}
+.bin-backdrop .bb-rim-one{top:-21%;right:-13%;width:41vw;height:76vw;max-height:820px;border-radius:50%;transform:rotate(16deg)}
+.bin-backdrop .bb-rim-two{top:-15%;right:-15%;width:38vw;height:72vw;max-height:790px;border-radius:50%;transform:rotate(16deg);opacity:.48}
+.bin-backdrop .bb-main{position:relative;z-index:1;width:min(1380px,100%);margin:auto;padding:0 42px}
+.bin-backdrop .bb-heading{position:relative;z-index:3;width:55%;padding:14px 0 0 2%}
+.bin-backdrop .hero-logo{width:min(310px,76%);margin-bottom:25px;filter:drop-shadow(0 7px 22px rgba(0,0,0,.55))}
+.bin-backdrop h1{font-size:clamp(3.45rem,6vw,5.9rem);line-height:.88;letter-spacing:.02em;text-shadow:0 5px 35px rgba(0,0,0,.55)}
+.bin-backdrop h1 .grad{color:var(--green)}
+.bin-backdrop .bb-device-field{position:relative;z-index:2;height:clamp(390px,35vw,475px);margin:18px 0 12px 18%;perspective:1400px}
+.bin-backdrop .bb-laptop{position:absolute;z-index:1;top:0;right:5%;width:min(72%,800px);height:auto;transform:perspective(1300px) rotateY(-9deg) rotateX(3deg) rotateZ(-1deg);filter:drop-shadow(0 34px 32px rgba(0,0,0,.78))}
+.bin-backdrop .bb-phone{position:absolute;z-index:4;right:0;top:20%;width:clamp(110px,14vw,180px);height:auto;transform:rotate(6deg);filter:drop-shadow(0 24px 28px rgba(0,0,0,.82))}
+.bin-backdrop .bb-bench{position:absolute;z-index:0;left:1%;right:-4%;bottom:2%;height:21%;border-radius:50% 42% 0 0;background:linear-gradient(180deg,rgba(48,48,38,.86),rgba(11,13,11,.94));box-shadow:0 -1px 0 rgba(61,232,76,.36),0 26px 60px rgba(0,0,0,.65);transform:skewX(-9deg)}
+.bin-backdrop .bb-hardware{position:absolute;z-index:3;left:18%;right:13%;bottom:4%;height:10%;border-radius:50%;background:linear-gradient(180deg,#56574e,#171a17 26%,#080b09 68%);box-shadow:0 14px 24px rgba(0,0,0,.65);opacity:.88}
+.bin-backdrop .bb-hardware span{position:absolute;top:18%;height:1px;background:rgba(255,255,255,.13);left:4%;right:4%}
+.bin-backdrop .bb-hardware span:nth-child(2){top:42%;left:18%;right:18%;opacity:.65}
+.bin-backdrop .bb-hardware span:nth-child(3){top:68%;left:31%;right:31%;opacity:.4}
+.bin-backdrop .bb-details{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:end;position:relative;z-index:4;margin:0 2%}
+.bin-backdrop .hero-cta{justify-content:flex-start;margin:0;gap:10px;flex-wrap:wrap}
+.bin-backdrop .hero-cta .btn{padding:12px 18px;font-size:.93rem}
+.bin-backdrop .btn.primary{background:linear-gradient(180deg,var(--green-hi),var(--green));color:#06210a}
+.bin-backdrop .hero-chips{justify-content:flex-end;gap:8px;margin:0}
+.bin-backdrop .chip{background:rgba(9,13,11,.78);border-color:rgba(40,189,53,.4);padding:10px 12px;font-size:.79rem;backdrop-filter:blur(10px);box-shadow:0 5px 18px rgba(0,0,0,.22)}
+@media(max-width:900px) and (min-width:761px){
+ .bin-backdrop .bb-details{grid-template-columns:1fr}
+ .bin-backdrop .hero-chips{justify-content:flex-start}
+}
+@media(max-width:760px){
+ .bin-backdrop.hero{min-height:100vh;padding:26px 0 30px}
+ .bin-backdrop .bb-yard{background-position:62% top;background-size:auto 590px}
+ .bin-backdrop .bb-vignette{background:linear-gradient(180deg,rgba(7,11,9,.46),rgba(7,11,9,.27) 270px,rgba(7,11,9,.83) 570px,#080b09 100%),linear-gradient(90deg,rgba(7,11,9,.58),rgba(7,11,9,.14))}
+ .bin-backdrop .bb-rim-one{width:68vw;height:112vw;right:-41%;top:-8%;max-height:none}
+ .bin-backdrop .bb-rim-two{width:62vw;height:106vw;right:-40%;top:-5%;max-height:none}
+ .bin-backdrop .bb-main{padding:0 18px}
+ .bin-backdrop .bb-heading{width:100%;padding:0;text-align:center}
+ .bin-backdrop .hero-logo{width:min(238px,74vw);margin:0 auto 19px}
+ .bin-backdrop h1{font-size:clamp(2.85rem,11.5vw,3.8rem);line-height:.91}
+ .bin-backdrop .bb-device-field{height:clamp(240px,71vw,310px);margin:-2px -8px 8px;perspective:900px}
+ .bin-backdrop .bb-laptop{width:94%;right:0;top:5%;transform:rotate(-3deg);filter:drop-shadow(0 22px 17px rgba(0,0,0,.82))}
+ .bin-backdrop .bb-phone{width:27%;right:-1%;top:29%;transform:rotate(7deg)}
+ .bin-backdrop .bb-bench{left:0;right:-8%;height:24%;bottom:0}
+ .bin-backdrop .bb-hardware{left:16%;right:10%;bottom:2%;height:10%}
+ .bin-backdrop .bb-details{display:flex;flex-direction:column-reverse;gap:16px;margin:0}
+ .bin-backdrop .hero-chips{width:100%;display:flex;flex-direction:column;gap:0;margin:0;padding:4px 0;border:1px solid rgba(255,255,255,.08);border-radius:17px;background:rgba(8,12,10,.83);backdrop-filter:blur(13px)}
+ .bin-backdrop .chip{position:relative;width:100%;padding:8px 13px;background:none;border:0;border-radius:0;box-shadow:none;font-size:.84rem}
+ .bin-backdrop .chip+.chip:before{content:"";position:absolute;top:0;left:60px;right:13px;height:1px;background:rgba(255,255,255,.08)}
+ .bin-backdrop .chip svg{width:31px;height:31px;padding:7px;box-sizing:border-box;background:rgba(40,189,53,.08);border:1px solid rgba(40,189,53,.2);border-radius:9px}
+ .bin-backdrop .bb-intro{text-align:center}
+ .bin-backdrop .bb-intro{width:100%}
+ .bin-backdrop .hero-cta{flex-direction:column;gap:9px}
+ .bin-backdrop .hero-cta .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){.bin-backdrop *{scroll-behavior:auto}}

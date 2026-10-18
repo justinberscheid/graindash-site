@@ -1,6 +1,6 @@
 .gd-farm {
   --farm-ink: #f7f2e6;
-  --farm-green: #65dc59;
+  --farm-green: var(--green);
   position: relative;
   isolation: isolate;
   min-height: 100svh;
@@ -56,7 +56,7 @@
   letter-spacing: .005em;
   text-shadow: 0 4px 26px rgba(0,0,0,.35);
 }
-.gd-farm h1 .grad { color: #a4e879; }
+.gd-farm h1 .grad { color: var(--green); }
 .gd-farm .hero-chips {
   max-width: 730px;
   justify-content: flex-start;
@@ -72,15 +72,15 @@
   font-size: .83rem;
   backdrop-filter: blur(8px);
 }
-.gd-farm .chip svg { stroke: #a4e879; }
+.gd-farm .chip svg { stroke: var(--green-hi); }
 .gd-farm .hero-cta { justify-content: flex-start; margin-top: 26px; }
 .gd-farm .hero-cta .btn { border-radius: 7px; }
 .gd-farm .btn.primary {
-  color: #172715;
-  background: #a9e87c;
+  color: #06210a;
+  background: linear-gradient(180deg,var(--green-hi),var(--green));
   box-shadow: 0 8px 22px rgba(7, 14, 8, .28);
 }
-.gd-farm .btn.primary:hover { background: #c2f398; }
+.gd-farm .btn.primary:hover { box-shadow: 0 10px 30px rgba(40,189,53,.4); }
 .gd-farm .btn.ghost {
   color: #fff8eb;
   background: rgba(17, 26, 18, .42);

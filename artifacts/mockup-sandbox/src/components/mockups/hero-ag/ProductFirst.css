@@ -1,5 +1,5 @@
 .gd-product {
-  --product-green: #45d961;
+  --product-green: var(--green);
   position: relative;
   isolation: isolate;
   min-height: 100svh;
@@ -33,7 +33,7 @@
   inset: 0;
   pointer-events: none;
   opacity: .35;
-  background: linear-gradient(115deg, transparent 0 67%, rgba(69,217,97,.09) 67.1%, transparent 67.3%);
+  background: linear-gradient(115deg, transparent 0 67%, rgba(40,189,53,.09) 67.1%, transparent 67.3%);
 }
 .gd-product .gd-product-wrap {
   width: min(1360px, calc(100% - 72px));
@@ -63,7 +63,7 @@
   margin-top: 25px;
 }
 .gd-product .chip {
-  border: 1px solid rgba(100, 216, 115, .27);
+  border: 1px solid rgba(40,189,53,.27);
   color: #e7ece4;
   background: rgba(17, 27, 21, .7);
   border-radius: 6px;
@@ -71,13 +71,13 @@
   font-size: .77rem;
   backdrop-filter: blur(8px);
 }
-.gd-product .chip svg { stroke: #6be27b; }
+.gd-product .chip svg { stroke: var(--green-hi); }
 .gd-product .hero-cta { justify-content: flex-start; gap: 10px; margin-top: 24px; }
 .gd-product .hero-cta .btn { padding: 12px 18px; border-radius: 7px; font-size: .93rem; }
 .gd-product .btn.primary {
-  background: #43d45b;
-  color: #07170b;
-  box-shadow: 0 8px 28px rgba(36, 188, 69, .2);
+  background: linear-gradient(180deg,var(--green-hi),var(--green));
+  color: #06210a;
+  box-shadow: 0 8px 28px rgba(40,189,53,.2);
 }
 .gd-product .btn.ghost {
   color: #e5ebe5;
@@ -101,7 +101,7 @@
   left: 7%;
   top: 18%;
   border-radius: 50%;
-  background: rgba(62, 196, 81, .15);
+  background: rgba(40,189,53,.15);
   filter: blur(68px);
 }
 .gd-product .gd-product-laptop {
