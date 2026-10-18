@@ -139,11 +139,12 @@
   .gd-farm h1 .nw { display: block; }
   .gd-farm .hero-chips {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 100%;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    width: fit-content;
     max-width: 100%;
+    justify-content: start;
   }
-  .gd-farm .chip { min-width: 0; line-height: 1.2; }
+  .gd-farm .chip { min-width: 0; max-width: 100%; line-height: 1.2; }
   .gd-farm .gd-farm-devices {
     position: relative;
     top: auto;
