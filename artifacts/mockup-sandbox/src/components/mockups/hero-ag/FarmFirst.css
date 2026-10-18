@@ -7,7 +7,7 @@
   overflow: hidden;
   padding: clamp(28px, 5vh, 58px) 0 46px;
   color: var(--farm-ink);
-  background: #18231a;
+  background: #34402b;
 }
 .gd-farm .gd-farm-scene,
 .gd-farm .gd-farm-shade,
@@ -18,14 +18,14 @@
 }
 .gd-farm .gd-farm-scene {
   z-index: -3;
-  background: url("/__mockup/images/graindash-prairie-bins.png") center 57% / cover no-repeat;
-  transform: scale(1.015);
+  background: url("/__mockup/images/graindash-prairie-bins-v2.jpg") center 58% / cover no-repeat;
+  transform: scale(1.025);
 }
 .gd-farm .gd-farm-shade {
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(11, 21, 15, .94) 0%, rgba(14, 24, 16, .83) 35%, rgba(15, 23, 15, .43) 68%, rgba(12, 18, 13, .46) 100%),
-    linear-gradient(0deg, rgba(10, 15, 11, .9) 0%, transparent 44%, rgba(17, 24, 16, .3) 100%);
+    linear-gradient(90deg, rgba(18, 29, 20, .82) 0%, rgba(20, 31, 21, .72) 34%, rgba(24, 32, 22, .27) 66%, rgba(25, 31, 22, .18) 100%),
+    linear-gradient(0deg, rgba(16, 22, 16, .72) 0%, rgba(20, 27, 19, .08) 43%, rgba(31, 39, 28, .12) 100%);
 }
 .gd-farm .gd-farm-grain {
   z-index: -1;
@@ -90,10 +90,12 @@
   position: absolute;
   z-index: 1;
   right: max(2.2vw, calc((100vw - 1440px) / 2));
-  bottom: 10px;
-  width: min(57vw, 780px);
-  height: clamp(275px, 34vw, 470px);
+  top: 38%;
+  width: min(43vw, 650px);
+  height: auto;
+  aspect-ratio: 1.73;
   pointer-events: none;
+  animation: farm-devices-arrive .85s cubic-bezier(.2,.75,.25,1) .12s both;
 }
 .gd-farm .gd-farm-laptop {
   position: absolute;
@@ -106,8 +108,12 @@
   position: absolute;
   width: clamp(88px, 10vw, 142px);
   right: 1%;
-  bottom: -10px;
+  bottom: -2px;
   filter: drop-shadow(0 18px 23px rgba(0,0,0,.68));
+}
+@keyframes farm-devices-arrive {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 @media (min-width: 1500px) {
   .gd-farm { min-height: 860px; }
@@ -120,6 +126,7 @@
   .gd-farm .hero-chips { max-width: 700px; }
   .gd-farm .gd-farm-devices {
     position: relative;
+    top: auto;
     right: auto;
     bottom: auto;
     width: min(100%, 680px);
@@ -129,7 +136,7 @@
   }
   .gd-farm .gd-farm-phone { width: clamp(90px, 18vw, 130px); }
   .gd-farm .gd-farm-shade {
-    background: linear-gradient(180deg, rgba(12,21,14,.91), rgba(12,21,14,.7) 53%, rgba(11,17,12,.83));
+    background: linear-gradient(180deg, rgba(16,25,17,.83), rgba(16,25,17,.63) 53%, rgba(12,19,13,.78));
   }
 }
 @media (max-width: 540px) {
@@ -163,8 +170,8 @@
   .gd-farm .chip svg { width: 21px; height: 21px; flex: 0 0 21px; padding: 0; background: none; border: 0; border-radius: 0; }
   .gd-farm .hero-cta { display: grid; grid-template-columns: 1fr; gap: 9px; margin-top: 20px; }
   .gd-farm .hero-cta .btn { width: 100%; padding: 12px 16px; }
-  .gd-farm .gd-farm-devices { width: calc(100% + 12px); margin: 16px -6px -10px; }
-  .gd-farm .gd-farm-phone { width: 22%; right: 0; bottom: -4px; }
+  .gd-farm .gd-farm-scene { background-position: 67% center; }
+  .gd-farm .gd-farm-devices { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .gd-farm *, .gd-farm *::before, .gd-farm *::after { animation: none !important; transition: none !important; }
