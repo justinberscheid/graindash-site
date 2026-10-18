@@ -62,7 +62,7 @@
   max-width: calc(100vw - 64px);
   justify-content: flex-start;
   gap: 10px;
-  margin-top: 27px;
+  margin-top: 15px;
 }
 .gd-farm .chip {
   border: 1px solid rgba(237, 230, 205, .29);
@@ -93,8 +93,8 @@
   z-index: 1;
   right: max(2.2vw, calc((100vw - 1440px) / 2));
   bottom: clamp(35px, 5vh, 55px);
-  width: min(57vw, 780px);
-  height: clamp(275px, 34vw, 470px);
+  width: min(59.5vw, 815px);
+  height: clamp(287px, 35.5vw, 491px);
   pointer-events: none;
   animation: farm-devices-arrive .85s cubic-bezier(.2,.75,.25,1) .12s both;
 }
@@ -107,7 +107,7 @@
 }
 .gd-farm .gd-farm-phone {
   position: absolute;
-  width: clamp(88px, 10vw, 142px);
+  width: clamp(92px, 10.45vw, 148px);
   right: 1%;
   bottom: -2px;
   filter: drop-shadow(0 18px 23px rgba(0,0,0,.68));
@@ -147,13 +147,13 @@
   .gd-farm { padding: 34px 0 20px; }
   .gd-farm .gd-farm-wrap { width: calc(100% - 36px); }
   .gd-farm .hero-logo { width: min(235px, 72vw); margin-bottom: 22px; }
-  .gd-farm h1 { font-size: clamp(2.75rem, 12vw, 4rem); line-height: .92; }
-  .gd-farm h1 .nw { white-space: normal; }
+  .gd-farm h1 { font-size: clamp(2.4rem, 11.5vw, 4rem); line-height: .92; }
+  .gd-farm h1 .nw { display: block; white-space: nowrap; }
   .gd-farm .hero-chips {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    margin-top: 24px;
+    margin-top: 12px;
     background: none;
     border: 0;
     padding: 0;
