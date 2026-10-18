@@ -124,6 +124,38 @@
 @media (min-width: 901px) and (max-height: 850px) {
   .gd-farm .hero-chips { max-width: 470px; }
 }
+@media (min-width: 901px) and (max-width: 1100px),
+       (min-width: 1101px) and (max-height: 850px) {
+  /* Reserve separate columns instead of squeezing an absolute device layer
+     behind the copy when a desktop window is narrow, short, or zoomed in. */
+  .gd-farm .gd-farm-wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 32px;
+    align-items: end;
+  }
+  .gd-farm .gd-farm-copy { width: 100%; min-width: 0; }
+  .gd-farm h1 { font-size: clamp(3rem, 5.1vw, 6.6rem); }
+  .gd-farm h1 .nw { display: block; }
+  .gd-farm .hero-chips {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 100%;
+  }
+  .gd-farm .chip { min-width: 0; line-height: 1.2; }
+  .gd-farm .gd-farm-devices {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.73;
+    margin: 0;
+  }
+  .gd-farm .gd-farm-phone { width: 18.2%; }
+}
 @media (max-width: 900px) {
   .gd-farm { min-height: auto; padding: 44px 0 30px; }
   .gd-farm .gd-farm-wrap { width: min(720px, calc(100% - 44px)); }
