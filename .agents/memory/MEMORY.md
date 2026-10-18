@@ -5,3 +5,4 @@
 - [GitHub push authentication](github-push-auth.md) — local commits can succeed while the remote remains unauthenticated; verify origin/main after every push attempt.
 - [Brand green preservation](brand-green.md) — hero explorations must preserve the website’s original greens; the user rejected altered green shades.
 - [Farm imagery authenticity](farm-imagery.md) — farm infrastructure must match the operation’s scale; do not put a grain leg on a small farm.
+- [Hero device adjustments](hero-device-adjustments.md) — adjust desktop product position without reducing the scale the user selected.
