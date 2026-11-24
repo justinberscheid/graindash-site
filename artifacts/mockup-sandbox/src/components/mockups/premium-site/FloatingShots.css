@@ -1,0 +1,48 @@
+/* Graphite / Suspended — staging is confined to the existing device images. */
+.premium-floating .gd-farm-devices {
+  animation: none;
+}
+
+.premium-floating .gd-farm-laptop,
+.premium-floating .laptop img {
+  filter:
+    drop-shadow(0 1px 1px rgba(231, 237, 239, .24))
+    drop-shadow(0 18px 18px rgba(0, 0, 0, .36))
+    drop-shadow(0 42px 36px rgba(0, 0, 0, .3));
+  transform: rotate(-1.15deg) translateY(-12px);
+  transform-origin: 54% 55%;
+}
+
+.premium-floating .gd-farm-phone,
+.premium-floating .phone img {
+  filter:
+    drop-shadow(0 1px 1px rgba(231, 237, 239, .25))
+    drop-shadow(0 13px 14px rgba(0, 0, 0, .4))
+    drop-shadow(0 29px 28px rgba(0, 0, 0, .32));
+  transform: rotate(3.25deg) translateY(-13px);
+  transform-origin: 50% 55%;
+}
+
+.premium-floating .showcase .phone {
+  left: auto;
+  right: 0;
+}
+
+.premium-floating .digest-phone img {
+  filter:
+    drop-shadow(0 1px 1px rgba(231, 237, 239, .22))
+    drop-shadow(0 14px 16px rgba(0, 0, 0, .35))
+    drop-shadow(0 38px 36px rgba(0, 0, 0, .3));
+  transform: rotate(-2.15deg) translateY(-10px);
+  transform-origin: 52% 52%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .premium-floating .gd-farm-laptop,
+  .premium-floating .gd-farm-phone,
+  .premium-floating .laptop img,
+  .premium-floating .phone img,
+  .premium-floating .digest-phone img {
+    transition: none;
+  }
+}
