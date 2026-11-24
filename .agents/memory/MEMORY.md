@@ -7,3 +7,4 @@
 - [Farm imagery authenticity](farm-imagery.md) — farm infrastructure must match the operation’s scale; do not put a grain leg on a small farm.
 - [Hero device adjustments](hero-device-adjustments.md) — adjust desktop product position without reducing the scale the user selected.
 - [Sticky header checks](sticky-header.md) — clip horizontal artwork without a scroll container; verify pinned position and header-aware anchor scrolling.
+- [Authentic product screens](product-screen-presentation.md) — improve the physical devices and staging without generating or rewriting the UI inside them.
