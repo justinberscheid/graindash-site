@@ -146,7 +146,7 @@ section.block{padding:88px 0;position:relative;}
 .digest h2{font-size:clamp(1.8rem,3.6vw,2.6rem);}
 .digest .lead{margin:18px 0 26px;color:var(--muted);font-size:1.1rem;}
 .digest-phone{display:flex;justify-content:center;align-items:center;}
-.digest-phone img{height:clamp(420px,52vh,580px);width:auto;max-width:100%;filter:drop-shadow(0 14px 30px rgba(0,0,0,.45)) drop-shadow(0 40px 80px rgba(0,0,0,.3));}
+.digest-phone img{height:clamp(540px,74vh,780px);width:auto;max-width:100%;filter:drop-shadow(0 14px 30px rgba(0,0,0,.45)) drop-shadow(0 40px 80px rgba(0,0,0,.3));}
 html.js .digest-phone.sc-anim{transform:translateY(40px) translateX(28px) scale(.96);transition-delay:.12s;}
 html.js .digest-phone.sc-anim.in{transform:none;}
 /* get-started */
@@ -300,7 +300,7 @@ html.js .phone.sc-anim.in{transform:none;}
   .scout-grid{grid-template-columns:1fr;gap:34px;}
   .digest-grid{grid-template-columns:1fr;gap:28px;}
   .digest-phone{justify-content:center;}
-  .digest-phone img{height:clamp(380px,95vw,480px);width:auto;max-width:90%;}
+  .digest-phone img{height:clamp(460px,125vw,620px);width:auto;max-width:92%;}
   .digest-glow{top:auto;bottom:0;right:50%;transform:translate(50%,15%);width:480px;height:600px;}
 }
 @media(max-width:760px){
@@ -412,10 +412,8 @@ html.js .phone.sc-anim.in{transform:none;}
     </div>
     </div>
     <div class="gd-farm-devices" aria-label="GrainDash on laptop and phone">
-      <picture>
-        <source srcset="assets/hero-devices.webp" type="image/webp" />
-        <img class="gd-farm-hero-devices" src="assets/hero-devices.png" alt="GrainDash Overview dashboard on a laptop with the Sales vs Break-Even view on a phone" width="1800" height="1299" fetchpriority="high" />
-      </picture>
+      <picture><source srcset="assets/laptop-overview-black.webp" type="image/webp" /><img class="gd-farm-laptop" src="assets/laptop-overview-black.png" alt="GrainDash Overview dashboard on a laptop" width="1900" height="1135" fetchpriority="high" /></picture>
+      <picture><source srcset="assets/phone-sales-black.webp" type="image/webp" /><img class="gd-farm-phone" src="assets/phone-sales-black.png" alt="GrainDash Sales vs Break-Even view on a phone" width="520" height="1047" /></picture>
     </div>
   </div>
 </section>
