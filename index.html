@@ -733,5 +733,13 @@ window.setBilling=setBilling;
  if(mo)mo.addEventListener('click',function(){setBilling(false);});
  if(yr)yr.addEventListener('click',function(){setBilling(true);});})();
 </script>
+<script>
+/* Hero devices: anchor the laptop corner just right of the feature chips */
+(function(){var h=document.querySelector('.gd-farm'),c=h&&h.querySelector('.hero-chips');if(!c)return;
+function place(){var hr=h.getBoundingClientRect(),r=0,t=1e9;c.querySelectorAll('.chip').forEach(function(e){var b=e.getBoundingClientRect();r=Math.max(r,b.right);t=Math.min(t,b.top)});
+h.style.setProperty('--gd-dev-left',Math.round(r-hr.left+60)+'px');h.style.setProperty('--gd-dev-top',Math.round(t-hr.top)+'px');
+requestAnimationFrame(function(){var d=h.querySelector('.gd-farm-devices'),p=h.querySelector('.gd-farm-phone');if(!d)return;var top=h.getBoundingClientRect().top,b=d.getBoundingClientRect().bottom;if(p)b=Math.max(b,p.getBoundingClientRect().bottom);h.style.setProperty('--gd-hero-min',Math.round(b-top+44)+'px');});}
+place();addEventListener('resize',place);addEventListener('load',place);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(place);})();
+</script>
 </body>
 </html>

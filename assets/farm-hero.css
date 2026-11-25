@@ -241,6 +241,15 @@
   .gd-farm .gd-farm-phone { width: 21%; }
 }
 @media (min-width: 1101px) and (min-height: 851px) {
-  /* Leave room so the larger devices sit below the feature chips */
-  .gd-farm { min-height: max(100svh, calc(455px + min(61vw, 900px) * .6)); }
+  /* Laptop's top-left corner sits just right of the feature chips, level with
+     the first chip row; it keeps its size and bleeds off the right edge when
+     the window is narrower. --gd-dev-left/top are measured by a small script. */
+  .gd-farm .gd-farm-devices {
+    left: var(--gd-dev-left, 62%);
+    top: var(--gd-dev-top, 32%);
+    right: auto;
+    bottom: auto;
+    width: min(960px, max(calc(100% - var(--gd-dev-left, 62%) - 28px), min(900px, 60vw)));
+  }
+  .gd-farm { min-height: max(100svh, var(--gd-hero-min, 0px)); }
 }
