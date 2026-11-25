@@ -412,8 +412,10 @@ html.js .phone.sc-anim.in{transform:none;}
     </div>
     </div>
     <div class="gd-farm-devices" aria-label="GrainDash on laptop and phone">
-      <img class="gd-farm-laptop" src="assets/laptop-overview.png" alt="GrainDash overview running on a laptop" width="1390" height="794" />
-      <img class="gd-farm-phone" src="assets/phone-sales.png" alt="GrainDash sales and break-even view on a phone" width="455" height="918" />
+      <picture>
+        <source srcset="assets/hero-devices.webp" type="image/webp" />
+        <img class="gd-farm-hero-devices" src="assets/hero-devices.png" alt="GrainDash Overview dashboard on a laptop with the Sales vs Break-Even view on a phone" width="1800" height="1299" fetchpriority="high" />
+      </picture>
     </div>
   </div>
 </section>
@@ -435,10 +437,10 @@ html.js .phone.sc-anim.in{transform:none;}
     <div class="sc-stage">
       <div class="sc-floor"></div>
       <div class="laptop sc-anim" data-reveal>
-        <img src="assets/laptop-overview.png" alt="GrainDash Overview dashboard on a laptop" loading="lazy" width="1390" height="794"/>
+        <picture><source srcset="assets/laptop-overview-black.webp" type="image/webp"/><img src="assets/laptop-overview-black.png" alt="GrainDash Overview dashboard on a laptop" loading="lazy" width="1900" height="1135"/></picture>
       </div>
       <div class="phone sc-anim" data-reveal>
-        <img src="assets/phone-sales.png" alt="GrainDash Sales vs Break-Even chart on an iPhone" loading="lazy" width="455" height="918"/>
+        <picture><source srcset="assets/phone-sales-black.webp" type="image/webp"/><img src="assets/phone-sales-black.png" alt="GrainDash Sales vs Break-Even chart on an iPhone" loading="lazy" width="520" height="1047"/></picture>
       </div>
     </div>
   </div>
@@ -532,7 +534,7 @@ html.js .phone.sc-anim.in{transform:none;}
     </ul>
   </div>
   <div class="digest-phone sc-anim" data-reveal>
-    <img src="assets/phone-digest.png" alt="GrainDash Daily Digest on an iPhone" loading="lazy" width="650" height="1290"/>
+    <picture><source srcset="assets/phone-digest-black.webp" type="image/webp"/><img src="assets/phone-digest-black.png" alt="GrainDash Daily Digest on an iPhone" loading="lazy" width="640" height="1289"/></picture>
   </div>
 </div></section>
 
