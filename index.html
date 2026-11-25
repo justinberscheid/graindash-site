@@ -146,7 +146,7 @@ section.block{padding:88px 0;position:relative;}
 .digest h2{font-size:clamp(1.8rem,3.6vw,2.6rem);}
 .digest .lead{margin:18px 0 26px;color:var(--muted);font-size:1.1rem;}
 .digest-phone{display:flex;justify-content:center;align-items:center;}
-.digest-phone img{height:clamp(420px,52vh,580px);width:auto;max-width:100%;filter:drop-shadow(0 14px 30px rgba(0,0,0,.45)) drop-shadow(0 40px 80px rgba(0,0,0,.3));}
+.digest-phone img{height:clamp(540px,74vh,780px);animation:gd-float 8s ease-in-out infinite;width:auto;max-width:100%;filter:drop-shadow(0 14px 30px rgba(0,0,0,.45)) drop-shadow(0 40px 80px rgba(0,0,0,.3));}
 html.js .digest-phone.sc-anim{transform:translateY(40px) translateX(28px) scale(.96);transition-delay:.12s;}
 html.js .digest-phone.sc-anim.in{transform:none;}
 /* get-started */
@@ -300,7 +300,7 @@ html.js .phone.sc-anim.in{transform:none;}
   .scout-grid{grid-template-columns:1fr;gap:34px;}
   .digest-grid{grid-template-columns:1fr;gap:28px;}
   .digest-phone{justify-content:center;}
-  .digest-phone img{height:clamp(380px,95vw,480px);width:auto;max-width:90%;}
+  .digest-phone img{height:clamp(460px,125vw,620px);width:auto;max-width:92%;}
   .digest-glow{top:auto;bottom:0;right:50%;transform:translate(50%,15%);width:480px;height:600px;}
 }
 @media(max-width:760px){
@@ -411,9 +411,20 @@ html.js .phone.sc-anim.in{transform:none;}
        <a class="btn ghost" href="https://apps.apple.com/us/app/graindash/id6798817387">Download the App</a>
     </div>
     </div>
-    <div class="gd-farm-devices" aria-label="GrainDash on laptop and phone">
-      <img class="gd-farm-laptop" src="assets/laptop-overview.png" alt="GrainDash overview running on a laptop" width="1390" height="794" />
-      <img class="gd-farm-phone" src="assets/phone-sales.png" alt="GrainDash sales and break-even view on a phone" width="455" height="918" />
+    <div class="gd-farm-devices gd-hero2" aria-label="GrainDash on laptop and phone">
+      <div class="gd-glow" aria-hidden="true"></div>
+      <div class="gd-lap-wrap">
+        <picture><source srcset="assets/laptop-overview-black.webp" type="image/webp" /><img class="gd-farm-laptop" src="assets/laptop-overview-black.png" alt="GrainDash Overview dashboard on a laptop" width="1900" height="1135" fetchpriority="high" /></picture>
+      </div>
+      <div class="gd-live-phone">
+        <div class="gd-live-float">
+          <video class="gd-live-screen" autoplay muted loop playsinline preload="auto" poster="assets/hero-app-poster.jpg" aria-hidden="true">
+            <source src="assets/hero-app-loop.webm" type="video/webm" />
+            <source src="assets/hero-app-loop.mp4" type="video/mp4" />
+          </video>
+          <picture><source srcset="assets/hero-phone-frame.webp" type="image/webp" /><img class="gd-live-frame" src="assets/hero-phone-frame.png" alt="The GrainDash app running on an iPhone" width="670" height="1405" /></picture>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -435,10 +446,10 @@ html.js .phone.sc-anim.in{transform:none;}
     <div class="sc-stage">
       <div class="sc-floor"></div>
       <div class="laptop sc-anim" data-reveal>
-        <img src="assets/laptop-overview.png" alt="GrainDash Overview dashboard on a laptop" loading="lazy" width="1390" height="794"/>
+        <picture><source srcset="assets/laptop-overview-black.webp" type="image/webp"/><img src="assets/laptop-overview-black.png" alt="GrainDash Overview dashboard on a laptop" loading="lazy" width="1900" height="1135"/></picture>
       </div>
       <div class="phone sc-anim" data-reveal>
-        <img src="assets/phone-sales.png" alt="GrainDash Sales vs Break-Even chart on an iPhone" loading="lazy" width="455" height="918"/>
+        <picture><source srcset="assets/phone-sales-hq.webp" type="image/webp"/><img src="assets/phone-sales-hq.png" alt="GrainDash Sales vs Break-Even chart on an iPhone" loading="lazy" width="643" height="1341"/></picture>
       </div>
     </div>
   </div>
@@ -532,7 +543,7 @@ html.js .phone.sc-anim.in{transform:none;}
     </ul>
   </div>
   <div class="digest-phone sc-anim" data-reveal>
-    <img src="assets/phone-digest.png" alt="GrainDash Daily Digest on an iPhone" loading="lazy" width="650" height="1290"/>
+    <picture><source srcset="assets/phone-digest-hq.webp" type="image/webp"/><img src="assets/phone-digest-hq.png" alt="GrainDash Daily Digest on an iPhone" loading="lazy" width="862" height="1785"/></picture>
   </div>
 </div></section>
 
@@ -732,6 +743,19 @@ window.setBilling=setBilling;
 (function(){var mo=document.getElementById('btnMo'),yr=document.getElementById('btnYr');
  if(mo)mo.addEventListener('click',function(){setBilling(false);});
  if(yr)yr.addEventListener('click',function(){setBilling(true);});})();
+</script>
+<script>
+/* Premium hero: place devices beside the feature chips, mouse parallax, pause offscreen */
+(function(){var h=document.querySelector('.gd-farm'),c=h&&h.querySelector('.hero-chips'),d=h&&h.querySelector('.gd-hero2');if(!d)return;
+var mq=matchMedia('(min-width: 1101px) and (min-height: 851px)'),rm=matchMedia('(prefers-reduced-motion: reduce)'),v=d.querySelector('video');
+function place(){if(!mq.matches){h.style.removeProperty('--gd-hero-min');return;}var hr=h.getBoundingClientRect(),r=0,t=1e9;c.querySelectorAll('.chip').forEach(function(e){var b=e.getBoundingClientRect();r=Math.max(r,b.right);t=Math.min(t,b.top)});
+h.style.setProperty('--gd-dev-left',Math.round(r-hr.left+64)+'px');h.style.setProperty('--gd-dev-top',Math.round(t-hr.top)+'px');
+requestAnimationFrame(function(){var top=h.getBoundingClientRect().top,b=d.getBoundingClientRect().bottom,p=d.querySelector('.gd-live-phone');if(p)b=Math.max(b,p.getBoundingClientRect().bottom);h.style.setProperty('--gd-hero-min',Math.round(b-top+48)+'px');});}
+place();addEventListener('resize',place);addEventListener('load',place);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(place);
+if(!rm.matches&&matchMedia('(pointer: fine)').matches){h.addEventListener('pointermove',function(e){var r=h.getBoundingClientRect();d.style.setProperty('--px',((e.clientX-r.left)/r.width*2-1).toFixed(3));d.style.setProperty('--py',((e.clientY-r.top)/r.height*2-1).toFixed(3));});
+h.addEventListener('pointerleave',function(){d.style.setProperty('--px',0);d.style.setProperty('--py',0);});}
+if(v){if(rm.matches){v.removeAttribute('autoplay');v.pause();}else if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){});}else v.pause();});},{threshold:0.05}).observe(d);}}
+})();
 </script>
 </body>
 </html>
